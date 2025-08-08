@@ -1,7 +1,5 @@
-import React from "react";
-
 const Reports = () => {
-  return <div>Reports</div>;
+  return <div className="text-xl">This is the Reports page.</div>;
 };
 
 export default Reports;

@@ -1,7 +1,5 @@
-import React from "react";
-
 const Security = () => {
-  return <div>Security</div>;
+  return <div className="text-xl">This is the Security page.</div>;
 };
 
 export default Security;

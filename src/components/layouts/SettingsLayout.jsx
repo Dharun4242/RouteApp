@@ -1,35 +1,26 @@
-import React from "react";
 import { Outlet, NavLink } from "react-router-dom";
 
 const SettingsLayout = () => {
   return (
-    <div className="p-4">
-      <div className="mb-4 border-b border-gray-200">
-        <nav className="flex space-x-4">
-          <NavLink
-            to="profile"
-            className={({ isActive }) =>
-              isActive
-                ? "border-b-2 border-blue-500 pb-1 text-blue-600 font-medium"
-                : "pb-1 text-gray-600 hover:text-blue-500"
-            }
-          >
-            Profile
-          </NavLink>
-          <NavLink
-            to="security"
-            className={({ isActive }) =>
-              isActive
-                ? "border-b-2 border-blue-500 pb-1 text-blue-600 font-medium"
-                : "pb-1 text-gray-600 hover:text-blue-500"
-            }
-          >
-            Security
-          </NavLink>
-        </nav>
-      </div>
-
-      <Outlet />
+    <div className="flex">
+      <aside className="w-48 p-4 bg-gray-100 h-screen">
+        <h2 className="mb-4 font-bold">Settings Menu</h2>
+        <ul className="space-y-2">
+          <li>
+            <NavLink to="profile" className="hover:underline">
+              Profile
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="security" className="hover:underline">
+              Security
+            </NavLink>
+          </li>
+        </ul>
+      </aside>
+      <main className="p-4 flex-1">
+        <Outlet />
+      </main>
     </div>
   );
 };

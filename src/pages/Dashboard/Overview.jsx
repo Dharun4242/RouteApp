@@ -1,7 +1,5 @@
-import React from "react";
-
 const Overview = () => {
-  return <div>Overview</div>;
+  return <div className="text-xl">This is the Overview page.</div>;
 };
 
 export default Overview;

@@ -6,6 +6,7 @@ import Reports from "./pages/Dashboard/Reports";
 import SettingsLayout from "./components/layouts/SettingsLayout";
 import Profile from "./pages/Dashboard/Settings/Profile";
 import Security from "./pages/Dashboard/Settings/Security";
+import PageNotFound from "./pages/PageNotFound";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
             <Route path="/dashboard/settings/Security" element={<Security />} />
           </Route>
         </Route>
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );
